@@ -1,0 +1,31 @@
+#container {
+display: block;
+margin: 10%;
+}
+
+center {
+margin: 2%;
+}
+
+table {
+background: darkkhaki;
+}
+
+th {
+padding: 7px;
+}
+
+td {
+padding: 5px;
+text-align: left;
+font-size: large;
+}
+
+#footer {
+padding-top: 15%;
+}
+
+#buttons {
+background: transparent;
+border: none;
+}

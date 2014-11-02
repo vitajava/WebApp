@@ -1,0 +1,1 @@
+CALL `user`.`deleteUser`("qwerty");
