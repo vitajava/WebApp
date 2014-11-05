@@ -33,23 +33,23 @@ public class UserController {
 
         String login = request.getParameter("login");
         String phone = request.getParameter("phone");
-        List<User> list;
+        List<User> users;
 
         if(login != null) {
             LOGGER.info("Finding user by login = " + login);
-            list = userDao.findByLogin(login);
+            users = userDao.findByLogin(login);
 
         }
         else if(phone != null) {
             LOGGER.info("Finding user by phone = " + phone);
-            list = userDao.findByPhone(phone);
+            users = userDao.findByPhone(phone);
 
         } else {
             LOGGER.info("Finding all users");
-            list = userDao.findAllUsers();
+            users = userDao.findAllUsers();
 
         }
-        return new ModelAndView("index", "list", list);
+        return new ModelAndView("index", "list", users);
     }
 
     @RequestMapping(value = "/add.html", method = RequestMethod.POST)
